@@ -1,5 +1,5 @@
 #ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#define EMPLOYEE_
 
 class Employee{
 protected:
