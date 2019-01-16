@@ -47,6 +47,10 @@ int main(int argc, char** argv) {
     c.print();
     //cout << c.publicString << endl;
     
+    //derived student
+    derivedStudent ds = derivedStudent("derived student",2,5);
+    ds.print();
+    
     return 0;
 }
 

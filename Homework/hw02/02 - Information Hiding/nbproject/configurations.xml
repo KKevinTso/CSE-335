@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Dog.h</itemPath>
       <itemPath>Person-Hidden.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -38,8 +37,6 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Dog.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Person-Hidden.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
@@ -65,8 +62,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Dog.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Person-Hidden.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">

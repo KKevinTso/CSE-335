@@ -70,7 +70,7 @@ public:
         //error: 'socialSecurityNumber' is a private member of 'Person'
     }
 };
-class CSE335student: public ProtectedStudent{
+class CSE335student: protected ProtectedStudent{
 public:
     CSE335student(string a,int b,int c):ProtectedStudent(a,b,c){
     };
@@ -84,7 +84,39 @@ public:
     }
 };
 
+class PrivateCSE335student: public PrivateStudent{
+public:
+    PrivateCSE335student(string a,int b,int c):PrivateStudent(a,b,c){
+    };
+    
+    void print(){
+        //cout<<publicThing<<endl;
+        //error: 'publicThing' is a private member of 'Person'
+        
+        //cout<<protectedDataInPerson<<endl;
+        //error: 'protectedDataInPerson' is a private member of 'Person'
+        
+        //cout<<socialSecurityNumber<<endl;
+        //error: 'socialSecurityNumber' is a private member of 'Person'
+    }
+};
 
+class derivedStudent: Student{
+public:
+    derivedStudent(string a,int b,int c): Student(a,b,c){
+    };
+    
+    void print(){
+        cout<<publicThing<<endl;
+        //error: 'publicThing' is a private member of 'Person'
+        
+        cout<<protectedDataInPerson<<endl;
+        //error: 'protectedDataInPerson' is a private member of 'Person'
+        
+        //cout<<socialSecurityNumber<<endl;
+        //error: 'socialSecurityNumber' is a private member of 'Person'
+    }
+};
 
 #endif /* PERSON_HIDDEN_H */
 
