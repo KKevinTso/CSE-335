@@ -58,7 +58,7 @@ public:
     }
 };
 
-class Stack: protected DoubleQueue{
+class Stack: private DoubleQueue{
 public:
     
     void push(string element){
@@ -78,12 +78,12 @@ public:
     
 };
 
-class Queue: protected DoubleQueue{
+class Queue: private DoubleQueue{
 private:
     int size;
 public:
     
-    Queue(int a):DoubleQueue(){
+    Queue(int a){
         size = a;
     }
     
