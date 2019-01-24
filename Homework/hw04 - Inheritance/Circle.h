@@ -14,19 +14,23 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
+#define M_PI 3.14159265358979323846 //https://stackoverflow.com/questions/1727881/how-to-use-the-pi-constant-in-c
+
 using namespace std;
 
+// Circle extends class Shape
 class Circle: public Shape{
 private:
-    const float pi = 3.1495;
     float radius;
 public:
+    // constructor
     Circle(int x, int y, string color, float rad):Shape(x,y,color){
         radius = rad;
     }
     
+    // compute that area
     virtual float computeArea(){
-        return pi * (radius*radius);
+        return M_PI * (radius*radius);
     }
         
 };

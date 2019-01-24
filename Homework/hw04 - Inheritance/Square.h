@@ -18,10 +18,12 @@ using namespace std;
 #include <string>
 #include <iostream>
 
+// Square from Shape class
 class Square: public Shape{
 private:
     float edgeLength;
 public:
+    // constructor
     Square(int x, int y, string color, float edge_length):Shape(x,y,color){
         edgeLength = edge_length;
     }

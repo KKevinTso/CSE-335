@@ -19,24 +19,22 @@ using namespace std;
 
 class Shape{
 private:
-    int x_location = 0;
-    int y_location = 0;
-    string color = "";
-    
+    int x_location;
+    int y_location;
+    string color;
 public:
-    
+    // constructor
     Shape(int x, int y, string color_value){
         x_location = x;
         y_location = y;
         color = color_value;
     }
     
-    virtual float computeArea(){
-        
-    }
+    // defines computeArea function for derived classes to use
+    virtual float computeArea() = 0;
     
     void printColor(){
-        cout << color << endl;
+        cout << "Shape Color:" << color << endl;
     }
 };
 
