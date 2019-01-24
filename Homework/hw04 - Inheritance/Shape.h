@@ -18,7 +18,7 @@ using namespace std;
 #include <iostream>
 
 class Shape{
-private:
+protected:
     int x_location;
     int y_location;
     string color;
