@@ -24,34 +24,37 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     
-    vector<Shape*> shape_collection;
-    
+    // 5.
     // initialize Squares
-    Square s1 = Square(1,1,"black",3.1);
-    Square s2= Square(1,1,"white",7.0);
-    Square s3 = Square(1,1,"red",0.5);
-    Square s4 = Square(1,1,"black",110.8);
+    cout<<"*******************************"<<endl;
+    Square s1 = Square(2,2,"red",3.4);
+    Square* s2= new Square();
+    cout<<"*******************************"<<endl;
     
-    // add Squares to vector
-    shape_collection.push_back(&s1);
-    shape_collection.push_back(&s2);
-    shape_collection.push_back(&s3);
-    shape_collection.push_back(&s4);
-    
+    // 6.
     // initialize Circles
+    cout<<"*******************************"<<endl;
     Circle c1 = Circle(2,2,"white", 26.7);
-    Circle c2 = Circle(2,2,"red", 3.00001);
+    Circle* c2 = new Circle();
+    cout<<"*******************************"<<endl;
     
-    // add circles to vector
-    shape_collection.push_back(&c1);
-    shape_collection.push_back(&c2);
+    //7.
+    // delete squares and circles
+    // Square s1 and Circle c1 were already destructed
+    cout<<"*******************************"<<endl;
+    delete s2;
+    delete c2;
+    cout<<"*******************************"<<endl;
     
     
-    for(int i = 0; i < shape_collection.size(); ++i){
-        cout << "Shape Area: " << shape_collection[i]->computeArea() << endl; //prints returned area
-        shape_collection[i]->printColor(); //prints color on its own
-        cout << endl; //spacing
-    }
+    //8.
+    // square as variable inside block
+    cout<<"*******************************"<<endl;
+    {Square s3 = Square(1,1,"black",3.1);}
+    cout<<"*******************************"<<endl;
+    
+    //9.
+    // make sure to use endl
     
     return 0;
 }

@@ -29,7 +29,7 @@ public:
         x_location = x;
         y_location = y;
         color = color_value;
-        cout << "Shape Constructor with params." << endl;
+        cout << "In Shape Constructor with params." << endl;
     }
     
     // default constructor
@@ -37,7 +37,7 @@ public:
         x_location = 0;
         y_location = 0;
         color = "";
-        cout << "Shape Constructor without params." << endl;
+        cout << "In Shape Constructor without params." << endl;
     }
     
     // copy constructor

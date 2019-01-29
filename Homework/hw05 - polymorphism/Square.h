@@ -37,7 +37,12 @@ public:
     // copy constructor
     Square(const Square &square):Shape(square){
         if(this != &square){
+            // getter unique to Square class
             edgeLength = square.getEdgeLength();
+            //getters handled by shape class
+            x_location = square.getxLocation();
+            y_location = square.getyLocation();
+            color = square.getColor();
             cout << "In Square copy constructor" << endl;
         }
         else cout << "In Square copy constructor with Self-Copying." << endl;

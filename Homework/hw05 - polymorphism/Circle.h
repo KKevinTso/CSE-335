@@ -14,6 +14,9 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
+#include "Shape.h"
+
+
 #define M_PI 3.14159265358979323846 //https://stackoverflow.com/questions/1727881/how-to-use-the-pi-constant-in-c
 
 using namespace std;
@@ -41,6 +44,11 @@ public:
     // assingment operator overload
     Circle& operator=(const Circle &circle){
         if(this!= &circle){
+            // getters handled by base class
+            x_location = circle.getxLocation();
+            y_location = circle.getyLocation();
+            color = circle.getColor();
+            // getter unique to Circle class
             radius = circle.getRadius();
             cout << "In Assingment Operator." << endl;
         }
