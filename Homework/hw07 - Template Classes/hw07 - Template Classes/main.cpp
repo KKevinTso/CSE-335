@@ -28,11 +28,13 @@ int main(int argc, char** argv) {
         cout << "Pushing Integer element: " << i << endl;
         q.push(i);
     }
+    cout << endl;
     
     int size = q.getSize();
     for(int i = 0; i < size; ++i){
         cout << "Popping Integer element: " << q.pop() << endl;
     }
+    cout << endl;
     
     // Double Queue
     Queue<double> r;
@@ -42,6 +44,7 @@ int main(int argc, char** argv) {
         cout << "Pushing Double element: " << element << endl;
         r.push(element);
     }
+    cout << endl;
     
     size = r.getSize();
     for(int i = 0; i < size; ++i){
