@@ -24,12 +24,14 @@ int main(int argc, char** argv) {
     // Int Queue
     Queue<int> q;
     
+    // add elements
     for(int i = 1; i <= 6; ++i){
         cout << "Pushing Integer element: " << i << endl;
         q.push(i);
     }
     cout << endl;
     
+    // pop elements
     int size = q.getSize();
     for(int i = 0; i < size; ++i){
         cout << "Popping Integer element: " << q.pop() << endl;
@@ -39,6 +41,7 @@ int main(int argc, char** argv) {
     // Double Queue
     Queue<double> r;
     
+    // add elements
     for(int i = 1; i <= 6; ++i){
         const double element = i / 10.0;
         cout << "Pushing Double element: " << element << endl;
@@ -46,6 +49,7 @@ int main(int argc, char** argv) {
     }
     cout << endl;
     
+    // pop elements
     size = r.getSize();
     for(int i = 0; i < size; ++i){
         cout << "Popping Double element: " << r.pop() << endl;
