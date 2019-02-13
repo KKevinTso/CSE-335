@@ -19,6 +19,7 @@
                    projectFiles="true">
       <itemPath>BubbleSortDecreasing.cpp</itemPath>
       <itemPath>BubbleSortIncreasing.cpp</itemPath>
+      <itemPath>BubbleSortTemplate.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -50,6 +51,8 @@
       <item path="BubbleSortIncreasing.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BubbleSortIncreasing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BubbleSortTemplate.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BubbleSortTemplate.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -87,6 +90,8 @@
       <item path="BubbleSortIncreasing.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BubbleSortIncreasing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BubbleSortTemplate.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BubbleSortTemplate.h" ex="false" tool="3" flavor2="0">
       </item>

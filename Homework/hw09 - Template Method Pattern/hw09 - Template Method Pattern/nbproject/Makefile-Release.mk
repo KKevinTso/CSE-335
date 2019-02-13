@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/BubbleSortDecreasing.o \
 	${OBJECTDIR}/BubbleSortIncreasing.o \
+	${OBJECTDIR}/BubbleSortTemplate.o \
 	${OBJECTDIR}/main.o
 
 
@@ -73,6 +74,11 @@ ${OBJECTDIR}/BubbleSortIncreasing.o: BubbleSortIncreasing.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BubbleSortIncreasing.o BubbleSortIncreasing.cpp
+
+${OBJECTDIR}/BubbleSortTemplate.o: BubbleSortTemplate.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BubbleSortTemplate.o BubbleSortTemplate.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

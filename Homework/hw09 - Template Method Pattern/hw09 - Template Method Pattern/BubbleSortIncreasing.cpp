@@ -14,5 +14,5 @@
 #include "BubbleSortIncreasing.h"
 
 bool BubbleSortIncreasing::needSwap(SortableVector* sortableVector,int i, int j) const{
-    return sortableVector -> smaller(i,j);
+    return !sortableVector -> smaller(i,j);
 }

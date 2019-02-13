@@ -8,7 +8,7 @@
  * File:   BubbleSortTemplate.h
  * Author: tonys
  *
- * Created on February 13, 2019, 5:32 PM
+ * Created on February 13, 2019, 5:47 PM
  */
 
 #ifndef BUBBLESORTTEMPLATE_H
@@ -28,24 +28,10 @@ public:
     virtual bool needSwap( SortableVector* sortableVector,int i , int j) const = 0;
     
     
-    void sort(SortableVector* sortableVector){
-        bool sorted = false;          //preforms bubble sort algorithm 
-        int n=sortableVector->getSize(); //from lecture slides
-        while( !sorted ){
-            sorted = true;
-            for(int i=1; i<n; i++){
-                if(needSwap(sortableVector,i-1,i)){
-                    sortableVector->swap(i-1,i);
-                    sorted = false;
-                }
-            }
-            n--;
-        }
-    }
+    void sort(SortableVector* sortableVector);
     
     
 };
-
 
 #endif /* BUBBLESORTTEMPLATE_H */
 
