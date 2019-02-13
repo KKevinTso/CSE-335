@@ -17,8 +17,9 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
-#include "BubbleSortTemplate.h"
 #include <vector>
+
+#include "BubbleSortTemplate.h"
 
 using namespace std;
 
