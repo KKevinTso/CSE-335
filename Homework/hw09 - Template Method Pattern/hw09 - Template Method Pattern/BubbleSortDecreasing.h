@@ -8,8 +8,9 @@
  * File:   BubbleSortDecreasing.h
  * Author: tonys
  *
- * Created on February 13, 2019, 5:34 PM
+ * Created on February 13, 2019, 5:38 PM
  */
+
 #ifndef BUBBLESORTDECREASING_H
 #define BUBBLESORTDECREASING_H
 
@@ -23,10 +24,8 @@ using namespace std;
 
 class BubbleSortDecreasing : public BubbleSortTemplate{
 public:
-    bool needSwap(SortableVector* sortableVector,int i, int j) const{
-        return sortableVector -> smaller(i,j);  //sorts in decreasing order
-    }
+    bool needSwap(SortableVector* sortableVector,int i, int j) const;
 };
 
-
 #endif /* BUBBLESORTDECREASING_H */
+
