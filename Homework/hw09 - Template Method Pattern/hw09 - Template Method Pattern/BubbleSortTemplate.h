@@ -17,8 +17,9 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
-#include "SortableVector.h"
 #include <vector>
+
+#include "SortableVector.h"
 
 using namespace std;
 
