@@ -40,20 +40,11 @@ public:
 //    
     virtual bool smaller(int i, int j) const;
     
-    virtual void swap(int i, int j){
-        int temp = m_IntegerVector[i];
-        m_IntegerVector[i]=m_IntegerVector[j];
-        m_IntegerVector[j]=temp;
-    }
+    virtual void swap(int i, int j);
     
-    virtual void print() const {
-        for(int i=0; i<getSize(); i++)
-            cout<<m_IntegerVector[i]<<"; "<<endl;
-    }
+    virtual void print() const;
     
-    int getInteger(int i) const{
-        return m_IntegerVector[i];
-    }
+    int getInteger(int i) const;
     
     int insertInteger(int element) {
         m_IntegerVector.push_back(element);
@@ -63,39 +54,22 @@ public:
     // now for searchable items
     //////////////////////////////
 
-    void setQuery(int i){
-        m_query = i;
-    }
+    void setQuery(int i){m_query = i;}
     
     // return vector size
-    unsigned int getSize() const{
-        return m_IntegerVector.size();
-    }
+    unsigned int getSize() const{return m_IntegerVector.size();}
     
     // retrieves element from vector given a position
-    unsigned int getElement(int position) const{
-        return m_IntegerVector[position];
-    }
+    unsigned int getElement(int position) const{return m_IntegerVector[position];}
     
-    unsigned int getQuery() const{
-        return m_query;
-    }
-    
-    void print(){
-        for(int i = 0; i < getSize(); ++i){
-            cout << getElement(i) << "; ";
-        }
-        cout << endl;
-    }
+    unsigned int getQuery() const{return m_query;}
     
 //    // push back new item
 //    void insertInteger(int i){
 //        m_IntegerVector.push_back(i);
 //    }
     
-    unsigned int getMiddle(int a, int b) const{
-        return (a+b) / 2;
-    }
+    unsigned int getMiddle(int a, int b) const{return (a+b) / 2;}
 };
 
 #endif /* INTEGERVECTORSORTABLESEARCHABLE_H */

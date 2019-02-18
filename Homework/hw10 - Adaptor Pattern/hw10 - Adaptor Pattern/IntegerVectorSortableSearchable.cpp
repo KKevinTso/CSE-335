@@ -29,5 +29,18 @@ bool IntegerVectorSortableSearchable::smaller(int i, int j) const {
             return false;
     }
 
+void IntegerVectorSortableSearchable::swap(int i, int j){
+        int temp = m_IntegerVector[i];
+        m_IntegerVector[i]=m_IntegerVector[j];
+        m_IntegerVector[j]=temp;
+    }
 
 
+void IntegerVectorSortableSearchable::print() const {
+        for(int i=0; i<getSize(); i++)
+            cout<<m_IntegerVector[i]<<"; "<<endl;
+    }
+
+int IntegerVectorSortableSearchable::getInteger(int i) const{
+        return m_IntegerVector[i];
+    }
