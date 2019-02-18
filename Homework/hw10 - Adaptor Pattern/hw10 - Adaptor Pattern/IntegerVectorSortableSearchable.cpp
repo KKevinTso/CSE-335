@@ -22,3 +22,12 @@ IntegerVectorSortableSearchable::IntegerVectorSortableSearchable(const IntegerVe
 IntegerVectorSortableSearchable::~IntegerVectorSortableSearchable() {
 }
 
+bool IntegerVectorSortableSearchable::smaller(int i, int j) const {
+        if(getInteger(i) < getInteger(j))
+            return true;
+        else
+            return false;
+    }
+
+
+

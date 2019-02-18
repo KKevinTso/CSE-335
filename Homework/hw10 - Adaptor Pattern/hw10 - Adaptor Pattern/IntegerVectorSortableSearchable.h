@@ -38,12 +38,7 @@ public:
 //        return m_IntegerVector.size();
 //    }
 //    
-    virtual bool smaller(int i, int j) const {
-        if(getInteger(i) < getInteger(j))
-            return true;
-        else
-            return false;
-    }
+    virtual bool smaller(int i, int j) const;
     
     virtual void swap(int i, int j){
         int temp = m_IntegerVector[i];
