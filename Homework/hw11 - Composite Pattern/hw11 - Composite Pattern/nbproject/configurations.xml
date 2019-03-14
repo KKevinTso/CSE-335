@@ -4,6 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Bundle.h</itemPath>
+      <itemPath>Item.h</itemPath>
+      <itemPath>Laptop.h</itemPath>
+      <itemPath>Phone.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,6 +16,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Bundle.cpp</itemPath>
+      <itemPath>Item.cpp</itemPath>
+      <itemPath>Laptop.cpp</itemPath>
+      <itemPath>Phone.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -36,6 +44,22 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Bundle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Bundle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Item.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Item.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Laptop.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Laptop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Phone.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Phone.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -59,6 +83,22 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Bundle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Bundle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Item.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Item.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Laptop.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Laptop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Phone.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Phone.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

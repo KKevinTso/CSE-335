@@ -12,6 +12,10 @@
  */
 
 #include <cstdlib>
+#include "Bundle.h"
+#include "Item.h"
+#include "Phone.h"
+#include "Laptop.h"
 
 using namespace std;
 
