@@ -17,16 +17,21 @@
 #include "Item.h"
 
 #include <string>
+#include <iostream>
 
 using std::string;
+using std::cout;
 
 class Phone: public Item {
+protected:
+    int m_year;
 public:
-    Phone(string name, unsigned int price);
-    Phone(const Phone& orig);
+    Phone(string name, double price, int year);
     virtual ~Phone();
-private:
-
+    
+    virtual void print() const{
+        cout << "Phone Name:" << m_name << " Phone Price:" << m_price << " Phone Year:" << m_year;
+    }
 };
 
 #endif /* PHONE_H */

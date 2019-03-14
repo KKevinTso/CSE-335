@@ -23,7 +23,6 @@ protected:
     double m_price;
 public:
     Item(string name, double price);
-    Item(const Item& orig);
     virtual ~Item();
     
     //getters
@@ -34,6 +33,8 @@ public:
     virtual double getPrice() const{
         return m_price;
     }
+    
+    virtual void print() const = 0;
 };
 
 #endif /* ITEM_H */

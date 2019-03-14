@@ -13,13 +13,10 @@
 
 #include "Laptop.h"
 
-Laptop::Laptop(string name, unsigned int price) {
-    m_name = name;
-    m_price = price;
+Laptop::Laptop(string name, double price, string speed):Item(name,price) {
+    m_speed = speed;
 }
 
-Laptop::Laptop(const Laptop& orig) {
-}
 
 Laptop::~Laptop() {
 }

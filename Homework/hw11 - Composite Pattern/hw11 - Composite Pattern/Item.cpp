@@ -18,9 +18,6 @@ Item::Item(string name, double price) {
     m_price = price;
 }
 
-Item::Item(const Item& orig) {
-}
-
 Item::~Item() {
 }
 

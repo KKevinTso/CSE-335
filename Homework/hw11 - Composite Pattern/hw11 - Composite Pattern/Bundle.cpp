@@ -13,12 +13,30 @@
 
 #include "Bundle.h"
 
-Bundle::Bundle(string name, double discount_rate) {
-}
-
-Bundle::Bundle(const Bundle& orig) {
+Bundle::Bundle(string name, double discount_rate): Item(name, 0) {
+    m_name = name;
+    m_discount_rate = discount_rate;
 }
 
 Bundle::~Bundle() {
 }
 
+void Bundle::addItem(Item* item){
+    items.push_back(item);
+    m_price += item->getPrice()*m_discount_rate;
+}
+
+void Bundle::removeItem(Item* item){
+    remove(items.begin(), items.end(), item);
+    m_price -= item ->getPrice()*m_discount_rate;
+}
+
+void Bundle::print() const{
+    cout << endl;
+    cout << "Bundle Name: " << m_name << endl << " Has:(";
+    for(auto a: items){
+        a->print();
+    }
+    cout << ");" << endl;
+    cout << "Bundle Price:" << m_price;
+}

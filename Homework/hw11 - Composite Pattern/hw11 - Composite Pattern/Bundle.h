@@ -21,22 +21,24 @@
 #include <algorithm>
 
 using std::vector;
+using std::cout;
+using std::endl;
 
-class Bundle{
+class Bundle: public Item{
 protected:
     vector<Item*> items;
-    string m_name;
     double m_discount_rate;
 public:
     Bundle(string name, double discount_rate);
-    Bundle(const Bundle& orig);
+    
+    // do stuff to delete things
     virtual ~Bundle();
     
-    virtual void addItem(Item* item){
-        items.push_back(item);
-    }
-private:
-
+    virtual void addItem(Item* item);
+    
+    virtual void removeItem(Item* item);
+    
+    virtual void print() const;
 };
 
 #endif /* BUNDLE_H */
