@@ -29,9 +29,7 @@ public:
     Phone(string name, double price, int year);
     virtual ~Phone();
     
-    virtual void print() const{
-        cout << "Phone Name:" << m_name << " Phone Price:" << m_price << " Phone Year:" << m_year;
-    }
+    virtual void print() const;
 };
 
 #endif /* PHONE_H */

@@ -17,7 +17,9 @@ Laptop::Laptop(string name, double price, string speed):Item(name,price) {
     m_speed = speed;
 }
 
-
 Laptop::~Laptop() {
 }
 
+void Laptop::print() const{
+    cout << "(Laptop " << "Name=" << m_name << ", Laptop Price=" << m_price << ");";
+}

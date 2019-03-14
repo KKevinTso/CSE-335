@@ -32,11 +32,9 @@ void Bundle::removeItem(Item* item){
 }
 
 void Bundle::print() const{
-    cout << endl;
-    cout << "Bundle Name: " << m_name << endl << " Has:(";
+    cout << "Bundle " << m_name << " contains:(";
     for(auto a: items){
         a->print();
     }
-    cout << ");" << endl;
-    cout << "Bundle Price:" << m_price;
+    cout << ");" << "Bundle Price:" << m_price << ");";
 }

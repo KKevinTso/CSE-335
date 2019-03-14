@@ -26,13 +26,9 @@ public:
     virtual ~Item();
     
     //getters
-    virtual string getName() const{
-        return m_name;
-    }
+    virtual string getName() const{return m_name;}
     
-    virtual double getPrice() const{
-        return m_price;
-    }
+    virtual double getPrice() const{return m_price;}
     
     virtual void print() const = 0;
 };

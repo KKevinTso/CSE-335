@@ -17,7 +17,9 @@ Phone::Phone(string name, double price, int year):Item(name,price) {
     m_year = year;
 }
 
-
 Phone::~Phone() {
 }
 
+void Phone::print() const{
+    cout << "(Phone Name=" << m_name << ", Phone Price=" << m_price << ");";
+}

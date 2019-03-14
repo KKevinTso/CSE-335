@@ -29,9 +29,7 @@ public:
     Laptop(string name, double price, string speed);
     virtual ~Laptop();
     
-    virtual void print() const{
-        cout << "Type: Laptop " << "Name:" << m_name << " Price:" << m_price << " Speed:" << m_speed;
-    }
+    virtual void print() const;
 };
 
 #endif /* LAPTOP_H */
