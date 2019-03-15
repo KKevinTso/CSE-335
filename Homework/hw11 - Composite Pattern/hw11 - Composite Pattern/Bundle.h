@@ -26,7 +26,7 @@ using std::endl;
 
 class Bundle: public Item{
 protected:
-    vector<Item*> items;
+    vector<Item*> m_items;
     double m_discount_rate;
 public:
     Bundle(string name, double discount_rate);

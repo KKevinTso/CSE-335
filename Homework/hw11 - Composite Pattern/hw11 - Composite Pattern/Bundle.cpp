@@ -22,18 +22,18 @@ Bundle::~Bundle() {
 }
 
 void Bundle::addItem(Item* item){
-    items.push_back(item);
+    m_items.push_back(item);
     m_price += item->getPrice()*m_discount_rate;
 }
 
 void Bundle::removeItem(Item* item){
-    remove(items.begin(), items.end(), item);
+    remove(m_items.begin(), m_items.end(), item);
     m_price -= item ->getPrice()*m_discount_rate;
 }
 
 void Bundle::print() const{
     cout << "Bundle " << m_name << " contains:(";
-    for(auto a: items){
+    for(auto a: m_items){
         a->print();
     }
     cout << ");" << "Bundle Price:" << m_price << ");";
