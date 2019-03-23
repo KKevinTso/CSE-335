@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=hw11_-_composite_pattern
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/hw11_-_composite_pattern
+CND_ARTIFACT_NAME_Debug=hw13_-_builder_pattern
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/hw13_-_builder_pattern
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
-CND_PACKAGE_NAME_Debug=hw11-compositepattern.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/hw11-compositepattern.tar
+CND_PACKAGE_NAME_Debug=hw13-builderpattern.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/hw13-builderpattern.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=hw11_-_composite_pattern
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/hw11_-_composite_pattern
+CND_ARTIFACT_NAME_Release=hw13_-_builder_pattern
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/hw13_-_builder_pattern
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
-CND_PACKAGE_NAME_Release=hw11-compositepattern.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/hw11-compositepattern.tar
+CND_PACKAGE_NAME_Release=hw13-builderpattern.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/hw13-builderpattern.tar
 #
 # include compiler specific variables
 #

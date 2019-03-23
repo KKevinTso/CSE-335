@@ -4,9 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Directory.h</itemPath>
-      <itemPath>Entity.h</itemPath>
-      <itemPath>File.h</itemPath>
+      <itemPath>Builder.h</itemPath>
+      <itemPath>ExpBuilder.h</itemPath>
+      <itemPath>ExpParser.h</itemPath>
+      <itemPath>Node.h</itemPath>
+      <itemPath>NonTerminalNode.h</itemPath>
+      <itemPath>StackBasedCalVisitor.h</itemPath>
+      <itemPath>TerminalNode.h</itemPath>
+      <itemPath>Visitor.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -15,6 +20,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>ExpBuilder.cpp</itemPath>
+      <itemPath>ExpParser.cpp</itemPath>
+      <itemPath>Node.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -39,11 +47,27 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Directory.h" ex="false" tool="3" flavor2="0">
+      <item path="Builder.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Entity.h" ex="false" tool="3" flavor2="0">
+      <item path="ExpBuilder.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="File.h" ex="false" tool="3" flavor2="0">
+      <item path="ExpBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExpParser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExpParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Node.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Node.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NonTerminalNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StackBasedCalVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TerminalNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Visitor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -68,11 +92,27 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Directory.h" ex="false" tool="3" flavor2="0">
+      <item path="Builder.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Entity.h" ex="false" tool="3" flavor2="0">
+      <item path="ExpBuilder.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="File.h" ex="false" tool="3" flavor2="0">
+      <item path="ExpBuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ExpParser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExpParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Node.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Node.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="NonTerminalNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StackBasedCalVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TerminalNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Visitor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
