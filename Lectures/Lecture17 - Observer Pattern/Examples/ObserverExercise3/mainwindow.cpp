@@ -24,8 +24,8 @@ void MainWindow::on_CreateButton_clicked()
     newListener->show();
     newListener->setObserverID(observerID);
     observerID++;
-    connect(ui->horizontalSlider, SIGNAL(valueChanged(int)), newListener->getUi()->horizontalSlider, SLOT(setValue(int)));
-    connect(newListener->getUi()->horizontalSlider, SIGNAL(valueChanged(int)), ui->horizontalSlider, SLOT(setValue(int)));
+    connect(ui->horizontalSlider, SIGNAL(valueChanged(int)), newListener->getUi()->horizontalSliderDialog, SLOT(setValue(int)));
+    connect(newListener->getUi()->horizontalSliderDialog, SIGNAL(valueChanged(int)), ui->horizontalSlider, SLOT(setValue(int)));
     connect(newListener, SIGNAL(observerDeleted(unsigned int)), this, SLOT(deleteObserver(unsigned int)));
 }
 

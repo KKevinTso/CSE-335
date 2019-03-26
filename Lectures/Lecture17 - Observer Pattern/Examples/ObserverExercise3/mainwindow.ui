@@ -27,7 +27,7 @@
      <item>
       <widget class="QPushButton" name="CreateButton">
        <property name="text">
-        <string>Create New Observer</string>
+        <string>Create New Window</string>
        </property>
       </widget>
      </item>
@@ -41,7 +41,7 @@
      <item>
       <widget class="QPushButton" name="DeleteButton">
        <property name="text">
-        <string>Delete Last Observer</string>
+        <string>Delete Last Window</string>
        </property>
       </widget>
      </item>
@@ -67,7 +67,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
