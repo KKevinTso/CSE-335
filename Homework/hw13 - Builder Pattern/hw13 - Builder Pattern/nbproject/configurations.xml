@@ -23,6 +23,7 @@
       <itemPath>ExpBuilder.cpp</itemPath>
       <itemPath>ExpParser.cpp</itemPath>
       <itemPath>Node.cpp</itemPath>
+      <itemPath>StackBasedCalVisitor.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -62,6 +63,8 @@
       <item path="Node.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="NonTerminalNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StackBasedCalVisitor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="StackBasedCalVisitor.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -107,6 +110,8 @@
       <item path="Node.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="NonTerminalNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StackBasedCalVisitor.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="StackBasedCalVisitor.h" ex="false" tool="3" flavor2="0">
       </item>

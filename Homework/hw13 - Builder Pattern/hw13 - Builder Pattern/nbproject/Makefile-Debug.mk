@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/ExpBuilder.o \
 	${OBJECTDIR}/ExpParser.o \
 	${OBJECTDIR}/Node.o \
+	${OBJECTDIR}/StackBasedCalVisitor.o \
 	${OBJECTDIR}/main.o
 
 
@@ -79,6 +80,11 @@ ${OBJECTDIR}/Node.o: Node.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Node.o Node.cpp
+
+${OBJECTDIR}/StackBasedCalVisitor.o: StackBasedCalVisitor.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StackBasedCalVisitor.o StackBasedCalVisitor.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
