@@ -17,7 +17,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSlider>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,7 +27,6 @@ class Ui_ObserverDialog
 public:
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
-    QSlider *horizontalSliderDialog;
     QPushButton *ObserverDeleteButton;
     QLabel *label;
     QLabel *label_result;
@@ -44,12 +42,6 @@ public:
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalSliderDialog = new QSlider(layoutWidget);
-        horizontalSliderDialog->setObjectName(QStringLiteral("horizontalSliderDialog"));
-        horizontalSliderDialog->setOrientation(Qt::Horizontal);
-
-        verticalLayout->addWidget(horizontalSliderDialog);
-
         ObserverDeleteButton = new QPushButton(layoutWidget);
         ObserverDeleteButton->setObjectName(QStringLiteral("ObserverDeleteButton"));
 
@@ -63,7 +55,7 @@ public:
         label->setFont(font);
         label_result = new QLabel(ObserverDialog);
         label_result->setObjectName(QStringLiteral("label_result"));
-        label_result->setGeometry(QRect(220, 30, 71, 31));
+        label_result->setGeometry(QRect(180, 30, 201, 31));
         label_result->setFont(font);
 
         retranslateUi(ObserverDialog);
@@ -77,7 +69,7 @@ public:
         ObserverDialog->setWindowTitle(QApplication::translate("ObserverDialog", "Dialog", nullptr));
         ObserverDeleteButton->setText(QApplication::translate("ObserverDialog", "Reset", nullptr));
         label->setText(QApplication::translate("ObserverDialog", "Value:", nullptr));
-        label_result->setText(QApplication::translate("ObserverDialog", "-1", nullptr));
+        label_result->setText(QApplication::translate("ObserverDialog", "oops error", nullptr));
     } // retranslateUi
 
 };
