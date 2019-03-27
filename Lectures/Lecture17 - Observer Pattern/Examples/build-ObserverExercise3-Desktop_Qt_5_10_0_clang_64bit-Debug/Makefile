@@ -217,6 +217,7 @@ DIST          = /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/spec_pre.
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/qt_config.prf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/spec_post.prf \
+		../ObserverExercise3/.qmake.stash \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/toolchain.prf \
@@ -423,6 +424,7 @@ Makefile: ../ObserverExercise3/ObserverExercise3.pro /Users/tonysulfaro/Qt/5.10.
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/qt_config.prf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/toolchain.prf \
@@ -613,6 +615,7 @@ Makefile: ../ObserverExercise3/ObserverExercise3.pro /Users/tonysulfaro/Qt/5.10.
 /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/qt_config.prf:
 /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/tonysulfaro/Qt/5.10.0/clang_64/mkspecs/features/toolchain.prf:
@@ -686,6 +689,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r ObserverExercise3.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 

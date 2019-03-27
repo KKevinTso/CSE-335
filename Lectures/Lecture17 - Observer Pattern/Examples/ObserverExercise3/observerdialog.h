@@ -12,9 +12,9 @@ class ObserverDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit ObserverDialog(QWidget *parent = 0);
+    explicit ObserverDialog(QWidget *parent = 0, int value = -1);
     ~ObserverDialog();
-    void setObserverID(int);
+    void setObserverID(int, int);
     unsigned int getObserverID() const {return observerID;};
     Ui::ObserverDialog* getUi() const {return ui;};
 
@@ -27,6 +27,7 @@ private slots:
 private:
     Ui::ObserverDialog *ui;
     unsigned int observerID;
+    int mValue;
 };
 
 #endif // OBSERVERDIALOG_H
