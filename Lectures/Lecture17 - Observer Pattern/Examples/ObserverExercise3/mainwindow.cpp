@@ -25,7 +25,7 @@ void MainWindow::on_CreateButton_clicked()
     newListener->setObserverID(observerID, ui->horizontalSlider->value());
     observerID++;
     //connect(ui->horizontalSlider, SIGNAL(valueChanged(int)), newListener->getUi()->horizontalSliderDialog, SLOT(setValue(int)));
-    //connect(newListener->getUi()->horizontalSliderDialog, SIGNAL(valueChanged(int)), ui->horizontalSlider, SLOT(setValue(int)));
+    //connect(newListener->getUi()->ObserverDeleteButton, SIGNAL(clicked()), ui->horizontalSlider, SLOT(setValue(0)));
     connect(newListener, SIGNAL(observerDeleted(unsigned int)), this, SLOT(deleteObserver(unsigned int)));
 }
 
@@ -47,4 +47,5 @@ void MainWindow::deleteObserver(unsigned int id){
         if(listeners[i]->getObserverID()==id) listeners.erase(listeners.begin()+i);
     }
     //ui->label->setText("The " + QString::number(id+1) + "th observer is deleted!");
+    ui->horizontalSlider->setValue(0);
 }
