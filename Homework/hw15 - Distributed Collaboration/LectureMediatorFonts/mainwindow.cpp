@@ -12,14 +12,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->lineEditFamily,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(setFontByText(QString)));
-
     connect(ui->lineEditFamily,SIGNAL(textChanged(QString)),ui->fontComboBox,SLOT(setCurrentText(QString)));
+    connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->lineEditFamily,SLOT(showFont(QFont)));
 
     connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->labelFox,SLOT(setFont(QFont)));
     //Below works also.
     //connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),this,SLOT(getFont(QFont)));
 
-    connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->lineEditFamily,SLOT(showFont(QFont)));
+
 
     //type in font size
     connect(ui->lineEditSize,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(modifyFontByCheckboxSize(QString)));

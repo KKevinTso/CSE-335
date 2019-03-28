@@ -28,7 +28,6 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 #include <alexlabel.h>
-#include <alexlineedit.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -37,21 +36,20 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_2;
-    QLabel *label_2;
-    QLineEdit *lineEditSize;
-    QLabel *labelFamily;
-    QLabel *label_3;
     QComboBox *comboBoxEditSize;
-    QFontComboBox *fontComboBox;
-    QSlider *sliderEditSize;
+    QLineEdit *lineEditSize;
     QLabel *label_4;
-    AlexLineEdit *lineEditFamily;
-    AlexLabel *labelFox;
+    QFontComboBox *fontComboBox;
     QGroupBox *groupBox;
     QRadioButton *radioButtonArial;
     QRadioButton *radioButtonTNR;
     QRadioButton *radioButtonSans;
-    QLabel *label;
+    QLabel *labelFamily;
+    QLabel *label_2;
+    QLabel *label_3;
+    QSlider *sliderEditSize;
+    AlexLabel *labelFox;
+    QLineEdit *lineEditFamily;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -72,56 +70,25 @@ public:
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        comboBoxEditSize = new QComboBox(centralWidget);
+        comboBoxEditSize->setObjectName(QStringLiteral("comboBoxEditSize"));
 
-        gridLayout_2->addWidget(label_2, 7, 0, 1, 1);
+        gridLayout_2->addWidget(comboBoxEditSize, 2, 1, 1, 1);
 
         lineEditSize = new QLineEdit(centralWidget);
         lineEditSize->setObjectName(QStringLiteral("lineEditSize"));
 
-        gridLayout_2->addWidget(lineEditSize, 5, 1, 1, 1);
-
-        labelFamily = new QLabel(centralWidget);
-        labelFamily->setObjectName(QStringLiteral("labelFamily"));
-
-        gridLayout_2->addWidget(labelFamily, 1, 0, 1, 1);
-
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        gridLayout_2->addWidget(label_3, 5, 0, 1, 1);
-
-        comboBoxEditSize = new QComboBox(centralWidget);
-        comboBoxEditSize->setObjectName(QStringLiteral("comboBoxEditSize"));
-
-        gridLayout_2->addWidget(comboBoxEditSize, 6, 1, 1, 1);
-
-        fontComboBox = new QFontComboBox(centralWidget);
-        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
-
-        gridLayout_2->addWidget(fontComboBox, 2, 1, 1, 1);
-
-        sliderEditSize = new QSlider(centralWidget);
-        sliderEditSize->setObjectName(QStringLiteral("sliderEditSize"));
-        sliderEditSize->setOrientation(Qt::Horizontal);
-
-        gridLayout_2->addWidget(sliderEditSize, 7, 1, 1, 1);
+        gridLayout_2->addWidget(lineEditSize, 1, 1, 1, 1);
 
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
 
-        gridLayout_2->addWidget(label_4, 6, 0, 1, 1);
+        gridLayout_2->addWidget(label_4, 2, 0, 1, 1);
 
-        lineEditFamily = new AlexLineEdit(centralWidget);
-        lineEditFamily->setObjectName(QStringLiteral("lineEditFamily"));
+        fontComboBox = new QFontComboBox(centralWidget);
+        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
 
-        gridLayout_2->addWidget(lineEditFamily, 1, 1, 1, 1);
-
-        labelFox = new AlexLabel(centralWidget);
-        labelFox->setObjectName(QStringLiteral("labelFox"));
-
-        gridLayout_2->addWidget(labelFox, 0, 1, 1, 1);
+        gridLayout_2->addWidget(fontComboBox, 6, 1, 1, 1);
 
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
@@ -135,26 +102,51 @@ public:
         radioButtonSans->setObjectName(QStringLiteral("radioButtonSans"));
         radioButtonSans->setGeometry(QRect(430, 30, 191, 20));
 
-        gridLayout_2->addWidget(groupBox, 4, 1, 1, 1);
+        gridLayout_2->addWidget(groupBox, 3, 1, 1, 1);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
+        labelFamily = new QLabel(centralWidget);
+        labelFamily->setObjectName(QStringLiteral("labelFamily"));
 
-        gridLayout_2->addWidget(label, 4, 0, 1, 1);
+        gridLayout_2->addWidget(labelFamily, 3, 0, 1, 1);
+
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        gridLayout_2->addWidget(label_2, 4, 0, 1, 1);
+
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout_2->addWidget(label_3, 1, 0, 1, 1);
+
+        sliderEditSize = new QSlider(centralWidget);
+        sliderEditSize->setObjectName(QStringLiteral("sliderEditSize"));
+        sliderEditSize->setOrientation(Qt::Horizontal);
+
+        gridLayout_2->addWidget(sliderEditSize, 4, 1, 1, 1);
+
+        labelFox = new AlexLabel(centralWidget);
+        labelFox->setObjectName(QStringLiteral("labelFox"));
+
+        gridLayout_2->addWidget(labelFox, 0, 1, 1, 1);
+
+        lineEditFamily = new QLineEdit(centralWidget);
+        lineEditFamily->setObjectName(QStringLiteral("lineEditFamily"));
+
+        gridLayout_2->addWidget(lineEditFamily, 5, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
-        labelFamily->raise();
-        lineEditFamily->raise();
         fontComboBox->raise();
+        labelFox->raise();
         label_3->raise();
         lineEditSize->raise();
-        labelFox->raise();
-        sliderEditSize->raise();
-        label_2->raise();
         comboBoxEditSize->raise();
         label_4->raise();
         groupBox->raise();
-        label->raise();
+        labelFamily->raise();
+        label_2->raise();
+        sliderEditSize->raise();
+        lineEditFamily->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 777, 22));
@@ -174,16 +166,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Font Size", nullptr));
-        labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
-        labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
         groupBox->setTitle(QString());
         radioButtonArial->setText(QApplication::translate("MainWindow", "Arial", nullptr));
         radioButtonTNR->setText(QApplication::translate("MainWindow", "Times New Roman", nullptr));
         radioButtonSans->setText(QApplication::translate("MainWindow", "Comic Sans MS", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Family", nullptr));
+        labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Font Size", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
+        labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
     } // retranslateUi
 
 };
