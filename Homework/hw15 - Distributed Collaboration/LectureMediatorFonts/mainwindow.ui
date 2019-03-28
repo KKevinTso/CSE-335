@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>777</width>
-    <height>301</height>
+    <height>391</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,15 +21,15 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="1">
-     <widget class="AlexLineEdit" name="lineEditFamily"/>
-    </item>
-    <item row="6" column="1">
-     <widget class="QSlider" name="sliderEditSize">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Font Size</string>
       </property>
      </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="lineEditSize"/>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="labelFamily">
@@ -38,17 +38,30 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Style</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
+    <item row="5" column="0">
      <widget class="QLabel" name="label_3">
       <property name="text">
        <string>Font Size Type</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="comboBoxEditSize"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Family</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QFontComboBox" name="fontComboBox"/>
+    </item>
+    <item row="7" column="1">
+     <widget class="QSlider" name="sliderEditSize">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
@@ -58,21 +71,21 @@
        <item>
         <widget class="QCheckBox" name="checkBoxBold">
          <property name="text">
-          <string>Bold</string>
+          <string>Arial</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QCheckBox" name="checkBoxItalic">
          <property name="text">
-          <string>Italic</string>
+          <string>Times New Roman</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QCheckBox" name="checkBoxUnderline">
          <property name="text">
-          <string>Underline</string>
+          <string>Comic Sans MS</string>
          </property>
         </widget>
        </item>
@@ -80,14 +93,14 @@
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>Font Size</string>
+       <string>Font Size Type</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QFontComboBox" name="fontComboBox"/>
+    <item row="1" column="1">
+     <widget class="AlexLineEdit" name="lineEditFamily"/>
     </item>
     <item row="0" column="1">
      <widget class="AlexLabel" name="labelFox">
@@ -97,16 +110,49 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEditSize"/>
-    </item>
-    <item row="5" column="1">
-     <widget class="QComboBox" name="comboBoxEditSize"/>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Font Size Type</string>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>GroupBox</string>
       </property>
+      <widget class="QRadioButton" name="radioButtonArial">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Arial</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButtonTNR">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>30</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Times New Roman</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButtonSans">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>30</y>
+         <width>191</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Comic Sans MS</string>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -122,6 +168,7 @@
    <zorder>label_2</zorder>
    <zorder>comboBoxEditSize</zorder>
    <zorder>label_4</zorder>
+   <zorder>groupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

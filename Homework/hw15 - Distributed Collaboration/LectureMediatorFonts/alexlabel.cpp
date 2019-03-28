@@ -33,6 +33,27 @@ void AlexLabel::modifyFontByCheckboxUnderline(bool b){
     //QMessageBox::about(this, "test", font.toString());
 }
 
+void AlexLabel::modifyFontByRadioButtonArial(bool b){
+    if(b){
+        QFont font=this->font();
+        this->setFontByText("Arial");
+    }
+}
+
+void AlexLabel::modifyFontByRadioButtonTNR(bool b){
+    if(b){
+        QFont font=this->font();
+        this->setFontByText("Times New Roman");
+    }
+}
+
+void AlexLabel::modifyFontByRadioButtonSans(bool b){
+    if(b){
+        QFont font=this->font();
+        this->setFontByText("Comic Sans MS");
+    }
+}
+
 void AlexLabel::modifyFontByCheckboxSize(QString sizeString){
     //Get current font
     QFont font=this->font();

@@ -32,6 +32,11 @@ public slots:
     //For receiving signal QLineEdit for font size: void textChanged(const QString& text)
     void modifyFontByCheckboxSize(QString);
 
+    //radio button groups
+    void modifyFontByRadioButtonArial(bool);
+    void modifyFontByRadioButtonTNR(bool);
+    void modifyFontByRadioButtonSans(bool);
+
     void modifyFontBySliderValue(int);
 };
 

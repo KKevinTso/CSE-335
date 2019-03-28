@@ -21,12 +21,17 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->lineEditFamily,SLOT(showFont(QFont)));
 
+    //Check boxes for modifying text
     connect(ui->checkBoxBold,SIGNAL(clicked(bool)),ui->labelFox,SLOT(modifyFontByCheckboxBold(bool)));
     connect(ui->checkBoxItalic,SIGNAL(clicked(bool)),ui->labelFox,SLOT(modifyFontByCheckboxItalic(bool)));
     connect(ui->checkBoxUnderline,SIGNAL(clicked(bool)),ui->labelFox,SLOT(modifyFontByCheckboxUnderline(bool)));
 
     connect(ui->lineEditSize,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(modifyFontByCheckboxSize(QString)));
 
+    //radio buttons for fonts
+    connect(ui->radioButtonArial, SIGNAL(clicked(bool)),ui->labelFox, SLOT(modifyFontByRadioButtonArial(bool)));
+    connect(ui->radioButtonTNR, SIGNAL(clicked(bool)),ui->labelFox, SLOT(modifyFontByRadioButtonTNR(bool)));
+    connect(ui->radioButtonSans, SIGNAL(clicked(bool)),ui->labelFox, SLOT(modifyFontByRadioButtonSans(bool)));
     //slider testing
     connect(ui->sliderEditSize, SIGNAL(valueChanged(int)), ui->labelFox,SLOT(modifyFontBySliderValue(int)));
 }
