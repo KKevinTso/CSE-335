@@ -37,11 +37,20 @@ void AlexLabel::modifyFontByCheckboxSize(QString sizeString){
     //Get current font
     QFont font=this->font();
     //Modify the size of the font, keep other information of the font unchanged.
-    int size=sizeString.toInt();
-    if(size==0)
-        font.setPointSize(12);
-    else
-        font.setPixelSize(size);
+    int size = 10;
+
+
+    if (sizeString == "small"){
+        size = 10;
+    }
+    else if(sizeString == "medium"){
+        size = 20;
+    }
+    else if(sizeString == "large"){
+        size = 40;
+    }
+
+    font.setPixelSize(size);
     //Use the modified font
     this->setFont(font);
 }

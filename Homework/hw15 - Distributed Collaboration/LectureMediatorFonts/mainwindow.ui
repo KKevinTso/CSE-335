@@ -21,25 +21,36 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Size</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="AlexLabel" name="labelFox">
-      <property name="text">
-       <string>The quick brown fox likes CSE 335</string>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="1">
      <widget class="AlexLineEdit" name="lineEditFamily"/>
     </item>
-    <item row="2" column="1">
-     <widget class="QFontComboBox" name="fontComboBox"/>
+    <item row="6" column="1">
+     <widget class="QSlider" name="sliderEditSize">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelFamily">
+      <property name="text">
+       <string>Family</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Style</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Font Size Type</string>
+      </property>
+     </widget>
     </item>
     <item row="3" column="1">
      <widget class="QWidget" name="widgetWeight" native="true">
@@ -68,27 +79,33 @@
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="labelFamily">
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>Family</string>
+       <string>Font Size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QFontComboBox" name="fontComboBox"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="AlexLabel" name="labelFox">
+      <property name="text">
+       <string>The quick brown fox likes CSE 335</string>
       </property>
      </widget>
     </item>
     <item row="4" column="1">
      <widget class="QLineEdit" name="lineEditSize"/>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Style</string>
-      </property>
-     </widget>
-    </item>
     <item row="5" column="1">
-     <widget class="QSlider" name="sliderEditSize">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+     <widget class="QComboBox" name="comboBoxEditSize"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Font Size Type</string>
       </property>
      </widget>
     </item>
@@ -102,6 +119,9 @@
    <zorder>lineEditSize</zorder>
    <zorder>labelFox</zorder>
    <zorder>sliderEditSize</zorder>
+   <zorder>label_2</zorder>
+   <zorder>comboBoxEditSize</zorder>
+   <zorder>label_4</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
