@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_AlexLabel_t {
-    QByteArrayData data[12];
-    char stringdata0[248];
+    QByteArrayData data[9];
+    char stringdata0[166];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,20 +35,14 @@ QT_MOC_LITERAL(0, 0, 9), // "AlexLabel"
 QT_MOC_LITERAL(1, 10, 7), // "setFont"
 QT_MOC_LITERAL(2, 18, 0), // ""
 QT_MOC_LITERAL(3, 19, 13), // "setFontByText"
-QT_MOC_LITERAL(4, 33, 24), // "modifyFontByCheckboxBold"
-QT_MOC_LITERAL(5, 58, 26), // "modifyFontByCheckboxItalic"
-QT_MOC_LITERAL(6, 85, 29), // "modifyFontByCheckboxUnderline"
-QT_MOC_LITERAL(7, 115, 24), // "modifyFontByCheckboxSize"
-QT_MOC_LITERAL(8, 140, 28), // "modifyFontByRadioButtonArial"
-QT_MOC_LITERAL(9, 169, 26), // "modifyFontByRadioButtonTNR"
-QT_MOC_LITERAL(10, 196, 27), // "modifyFontByRadioButtonSans"
-QT_MOC_LITERAL(11, 224, 23) // "modifyFontBySliderValue"
+QT_MOC_LITERAL(4, 33, 24), // "modifyFontByCheckboxSize"
+QT_MOC_LITERAL(5, 58, 28), // "modifyFontByRadioButtonArial"
+QT_MOC_LITERAL(6, 87, 26), // "modifyFontByRadioButtonTNR"
+QT_MOC_LITERAL(7, 114, 27), // "modifyFontByRadioButtonSans"
+QT_MOC_LITERAL(8, 142, 23) // "modifyFontBySliderValue"
 
     },
     "AlexLabel\0setFont\0\0setFontByText\0"
-    "modifyFontByCheckboxBold\0"
-    "modifyFontByCheckboxItalic\0"
-    "modifyFontByCheckboxUnderline\0"
     "modifyFontByCheckboxSize\0"
     "modifyFontByRadioButtonArial\0"
     "modifyFontByRadioButtonTNR\0"
@@ -63,7 +57,7 @@ static const uint qt_meta_data_AlexLabel[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,23 +65,17 @@ static const uint qt_meta_data_AlexLabel[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   64,    2, 0x0a /* Public */,
-       3,    1,   67,    2, 0x0a /* Public */,
-       4,    1,   70,    2, 0x0a /* Public */,
-       5,    1,   73,    2, 0x0a /* Public */,
-       6,    1,   76,    2, 0x0a /* Public */,
-       7,    1,   79,    2, 0x0a /* Public */,
-       8,    1,   82,    2, 0x0a /* Public */,
-       9,    1,   85,    2, 0x0a /* Public */,
-      10,    1,   88,    2, 0x0a /* Public */,
-      11,    1,   91,    2, 0x0a /* Public */,
+       1,    1,   49,    2, 0x0a /* Public */,
+       3,    1,   52,    2, 0x0a /* Public */,
+       4,    1,   55,    2, 0x0a /* Public */,
+       5,    1,   58,    2, 0x0a /* Public */,
+       6,    1,   61,    2, 0x0a /* Public */,
+       7,    1,   64,    2, 0x0a /* Public */,
+       8,    1,   67,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QFont,    2,
     QMetaType::Void, QMetaType::QString,    2,
-    QMetaType::Void, QMetaType::Bool,    2,
-    QMetaType::Void, QMetaType::Bool,    2,
-    QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::QString,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
@@ -105,14 +93,11 @@ void AlexLabel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->setFont((*reinterpret_cast< QFont(*)>(_a[1]))); break;
         case 1: _t->setFontByText((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 2: _t->modifyFontByCheckboxBold((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 3: _t->modifyFontByCheckboxItalic((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 4: _t->modifyFontByCheckboxUnderline((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 5: _t->modifyFontByCheckboxSize((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 6: _t->modifyFontByRadioButtonArial((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 7: _t->modifyFontByRadioButtonTNR((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 8: _t->modifyFontByRadioButtonSans((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 9: _t->modifyFontBySliderValue((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: _t->modifyFontByCheckboxSize((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 3: _t->modifyFontByRadioButtonArial((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 4: _t->modifyFontByRadioButtonTNR((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 5: _t->modifyFontByRadioButtonSans((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 6: _t->modifyFontBySliderValue((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -143,13 +128,13 @@ int AlexLabel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 7;
     }
     return _id;
 }

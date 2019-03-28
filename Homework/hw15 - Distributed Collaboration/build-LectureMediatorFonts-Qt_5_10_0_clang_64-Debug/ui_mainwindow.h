@@ -13,12 +13,10 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -44,14 +42,8 @@ public:
     QLabel *labelFamily;
     QLabel *label_3;
     QComboBox *comboBoxEditSize;
-    QLabel *label;
     QFontComboBox *fontComboBox;
     QSlider *sliderEditSize;
-    QWidget *widgetWeight;
-    QHBoxLayout *horizontalLayout;
-    QCheckBox *checkBoxBold;
-    QCheckBox *checkBoxItalic;
-    QCheckBox *checkBoxUnderline;
     QLabel *label_4;
     AlexLineEdit *lineEditFamily;
     AlexLabel *labelFox;
@@ -59,6 +51,7 @@ public:
     QRadioButton *radioButtonArial;
     QRadioButton *radioButtonTNR;
     QRadioButton *radioButtonSans;
+    QLabel *label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -104,11 +97,6 @@ public:
 
         gridLayout_2->addWidget(comboBoxEditSize, 6, 1, 1, 1);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout_2->addWidget(label, 3, 0, 1, 1);
-
         fontComboBox = new QFontComboBox(centralWidget);
         fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
 
@@ -119,30 +107,6 @@ public:
         sliderEditSize->setOrientation(Qt::Horizontal);
 
         gridLayout_2->addWidget(sliderEditSize, 7, 1, 1, 1);
-
-        widgetWeight = new QWidget(centralWidget);
-        widgetWeight->setObjectName(QStringLiteral("widgetWeight"));
-        horizontalLayout = new QHBoxLayout(widgetWeight);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        checkBoxBold = new QCheckBox(widgetWeight);
-        checkBoxBold->setObjectName(QStringLiteral("checkBoxBold"));
-
-        horizontalLayout->addWidget(checkBoxBold);
-
-        checkBoxItalic = new QCheckBox(widgetWeight);
-        checkBoxItalic->setObjectName(QStringLiteral("checkBoxItalic"));
-
-        horizontalLayout->addWidget(checkBoxItalic);
-
-        checkBoxUnderline = new QCheckBox(widgetWeight);
-        checkBoxUnderline->setObjectName(QStringLiteral("checkBoxUnderline"));
-
-        horizontalLayout->addWidget(checkBoxUnderline);
-
-
-        gridLayout_2->addWidget(widgetWeight, 3, 1, 1, 1);
 
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
@@ -173,12 +137,15 @@ public:
 
         gridLayout_2->addWidget(groupBox, 4, 1, 1, 1);
 
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+
+        gridLayout_2->addWidget(label, 4, 0, 1, 1);
+
         MainWindow->setCentralWidget(centralWidget);
         labelFamily->raise();
         lineEditFamily->raise();
         fontComboBox->raise();
-        label->raise();
-        widgetWeight->raise();
         label_3->raise();
         lineEditSize->raise();
         labelFox->raise();
@@ -187,6 +154,7 @@ public:
         comboBoxEditSize->raise();
         label_4->raise();
         groupBox->raise();
+        label->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 777, 22));
@@ -209,16 +177,13 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "Font Size", nullptr));
         labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Family", nullptr));
-        checkBoxBold->setText(QApplication::translate("MainWindow", "Arial", nullptr));
-        checkBoxItalic->setText(QApplication::translate("MainWindow", "Times New Roman", nullptr));
-        checkBoxUnderline->setText(QApplication::translate("MainWindow", "Comic Sans MS", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
         labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
-        groupBox->setTitle(QApplication::translate("MainWindow", "GroupBox", nullptr));
+        groupBox->setTitle(QString());
         radioButtonArial->setText(QApplication::translate("MainWindow", "Arial", nullptr));
         radioButtonTNR->setText(QApplication::translate("MainWindow", "Times New Roman", nullptr));
         radioButtonSans->setText(QApplication::translate("MainWindow", "Comic Sans MS", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Family", nullptr));
     } // retranslateUi
 
 };
