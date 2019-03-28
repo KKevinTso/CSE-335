@@ -31,6 +31,8 @@ public slots:
     void modifyFontByCheckboxUnderline(bool);
     //For receiving signal QLineEdit for font size: void textChanged(const QString& text)
     void modifyFontByCheckboxSize(QString);
+
+    void modifyFontBySliderValue(int);
 };
 
 #endif // ALEXLABEL_H

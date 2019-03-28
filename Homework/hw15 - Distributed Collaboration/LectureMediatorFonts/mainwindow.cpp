@@ -26,6 +26,10 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->checkBoxUnderline,SIGNAL(clicked(bool)),ui->labelFox,SLOT(modifyFontByCheckboxUnderline(bool)));
 
     connect(ui->lineEditSize,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(modifyFontByCheckboxSize(QString)));
+
+    //slider testing
+    ui->labelFox->
+    connect(ui->sliderEditSize, SIGNAL(valueChanged(int)), ui->labelFox,SLOT(modifyFontBySliderValue(int)));
 }
 
 void MainWindow::getFont(QFont qf){

@@ -22,6 +22,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -35,18 +36,19 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_2;
-    QLabel *labelFamily;
-    AlexLabel *labelFox;
-    QLabel *label;
-    QFontComboBox *fontComboBox;
-    AlexLineEdit *lineEditFamily;
     QLabel *label_3;
-    QLineEdit *lineEditSize;
+    AlexLabel *labelFox;
+    AlexLineEdit *lineEditFamily;
+    QFontComboBox *fontComboBox;
     QWidget *widgetWeight;
     QHBoxLayout *horizontalLayout;
     QCheckBox *checkBoxBold;
     QCheckBox *checkBoxItalic;
     QCheckBox *checkBoxUnderline;
+    QLabel *labelFamily;
+    QLineEdit *lineEditSize;
+    QLabel *label;
+    QSlider *sliderEditSize;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -67,40 +69,25 @@ public:
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        labelFamily = new QLabel(centralWidget);
-        labelFamily->setObjectName(QStringLiteral("labelFamily"));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
 
-        gridLayout_2->addWidget(labelFamily, 1, 0, 1, 1);
+        gridLayout_2->addWidget(label_3, 4, 0, 1, 1);
 
         labelFox = new AlexLabel(centralWidget);
         labelFox->setObjectName(QStringLiteral("labelFox"));
 
         gridLayout_2->addWidget(labelFox, 0, 1, 1, 1);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout_2->addWidget(label, 3, 0, 1, 1);
-
-        fontComboBox = new QFontComboBox(centralWidget);
-        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
-
-        gridLayout_2->addWidget(fontComboBox, 2, 1, 1, 1);
-
         lineEditFamily = new AlexLineEdit(centralWidget);
         lineEditFamily->setObjectName(QStringLiteral("lineEditFamily"));
 
         gridLayout_2->addWidget(lineEditFamily, 1, 1, 1, 1);
 
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        fontComboBox = new QFontComboBox(centralWidget);
+        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
 
-        gridLayout_2->addWidget(label_3, 4, 0, 1, 1);
-
-        lineEditSize = new QLineEdit(centralWidget);
-        lineEditSize->setObjectName(QStringLiteral("lineEditSize"));
-
-        gridLayout_2->addWidget(lineEditSize, 4, 1, 1, 1);
+        gridLayout_2->addWidget(fontComboBox, 2, 1, 1, 1);
 
         widgetWeight = new QWidget(centralWidget);
         widgetWeight->setObjectName(QStringLiteral("widgetWeight"));
@@ -126,6 +113,27 @@ public:
 
         gridLayout_2->addWidget(widgetWeight, 3, 1, 1, 1);
 
+        labelFamily = new QLabel(centralWidget);
+        labelFamily->setObjectName(QStringLiteral("labelFamily"));
+
+        gridLayout_2->addWidget(labelFamily, 1, 0, 1, 1);
+
+        lineEditSize = new QLineEdit(centralWidget);
+        lineEditSize->setObjectName(QStringLiteral("lineEditSize"));
+
+        gridLayout_2->addWidget(lineEditSize, 4, 1, 1, 1);
+
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+
+        gridLayout_2->addWidget(label, 3, 0, 1, 1);
+
+        sliderEditSize = new QSlider(centralWidget);
+        sliderEditSize->setObjectName(QStringLiteral("sliderEditSize"));
+        sliderEditSize->setOrientation(Qt::Horizontal);
+
+        gridLayout_2->addWidget(sliderEditSize, 5, 1, 1, 1);
+
         MainWindow->setCentralWidget(centralWidget);
         labelFamily->raise();
         lineEditFamily->raise();
@@ -135,9 +143,10 @@ public:
         label_3->raise();
         lineEditSize->raise();
         labelFox->raise();
+        sliderEditSize->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 777, 20));
+        menuBar->setGeometry(QRect(0, 0, 777, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -154,13 +163,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
-        labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Style", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Size", nullptr));
+        labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
         checkBoxBold->setText(QApplication::translate("MainWindow", "Bold", nullptr));
         checkBoxItalic->setText(QApplication::translate("MainWindow", "Italic", nullptr));
         checkBoxUnderline->setText(QApplication::translate("MainWindow", "Underline", nullptr));
+        labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Style", nullptr));
     } // retranslateUi
 
 };

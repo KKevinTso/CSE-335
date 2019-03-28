@@ -45,3 +45,15 @@ void AlexLabel::modifyFontByCheckboxSize(QString sizeString){
     //Use the modified font
     this->setFont(font);
 }
+
+void AlexLabel::modifyFontBySliderValue(int size){
+    //Get current font
+    QFont font=this->font();
+    //Modify the size of the font, keep other information of the font unchanged.
+    if(size==0)
+        font.setPointSize(12);
+    else
+        font.setPixelSize(size);
+    //Use the modified font
+    this->setFont(font);
+}
