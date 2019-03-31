@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_AlexLabel_t {
-    QByteArrayData data[9];
-    char stringdata0[166];
+    QByteArrayData data[10];
+    char stringdata0[184];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,7 +39,8 @@ QT_MOC_LITERAL(4, 33, 24), // "modifyFontByCheckboxSize"
 QT_MOC_LITERAL(5, 58, 28), // "modifyFontByRadioButtonArial"
 QT_MOC_LITERAL(6, 87, 26), // "modifyFontByRadioButtonTNR"
 QT_MOC_LITERAL(7, 114, 27), // "modifyFontByRadioButtonSans"
-QT_MOC_LITERAL(8, 142, 23) // "modifyFontBySliderValue"
+QT_MOC_LITERAL(8, 142, 23), // "modifyFontBySliderValue"
+QT_MOC_LITERAL(9, 166, 17) // "modifySliderValue"
 
     },
     "AlexLabel\0setFont\0\0setFontByText\0"
@@ -47,7 +48,7 @@ QT_MOC_LITERAL(8, 142, 23) // "modifyFontBySliderValue"
     "modifyFontByRadioButtonArial\0"
     "modifyFontByRadioButtonTNR\0"
     "modifyFontByRadioButtonSans\0"
-    "modifyFontBySliderValue"
+    "modifyFontBySliderValue\0modifySliderValue"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,7 +58,7 @@ static const uint qt_meta_data_AlexLabel[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,13 +66,14 @@ static const uint qt_meta_data_AlexLabel[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   49,    2, 0x0a /* Public */,
-       3,    1,   52,    2, 0x0a /* Public */,
-       4,    1,   55,    2, 0x0a /* Public */,
-       5,    1,   58,    2, 0x0a /* Public */,
-       6,    1,   61,    2, 0x0a /* Public */,
-       7,    1,   64,    2, 0x0a /* Public */,
-       8,    1,   67,    2, 0x0a /* Public */,
+       1,    1,   54,    2, 0x0a /* Public */,
+       3,    1,   57,    2, 0x0a /* Public */,
+       4,    1,   60,    2, 0x0a /* Public */,
+       5,    1,   63,    2, 0x0a /* Public */,
+       6,    1,   66,    2, 0x0a /* Public */,
+       7,    1,   69,    2, 0x0a /* Public */,
+       8,    1,   72,    2, 0x0a /* Public */,
+       9,    1,   75,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QFont,    2,
@@ -81,6 +83,7 @@ static const uint qt_meta_data_AlexLabel[] = {
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::QString,    2,
 
        0        // eod
 };
@@ -98,6 +101,7 @@ void AlexLabel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 4: _t->modifyFontByRadioButtonTNR((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 5: _t->modifyFontByRadioButtonSans((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 6: _t->modifyFontBySliderValue((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: _t->modifySliderValue((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -128,13 +132,13 @@ int AlexLabel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }

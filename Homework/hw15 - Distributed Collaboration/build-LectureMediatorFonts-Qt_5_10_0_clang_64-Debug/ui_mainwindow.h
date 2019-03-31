@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
-#include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
@@ -36,20 +35,18 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_2;
-    QComboBox *comboBoxEditSize;
+    QLabel *label_3;
     QLineEdit *lineEditSize;
     QLabel *label_4;
-    QFontComboBox *fontComboBox;
+    QSlider *sliderEditSize;
+    AlexLabel *labelFox;
+    QLabel *labelFamily;
     QGroupBox *groupBox;
     QRadioButton *radioButtonArial;
     QRadioButton *radioButtonTNR;
     QRadioButton *radioButtonSans;
-    QLabel *labelFamily;
     QLabel *label_2;
-    QLabel *label_3;
-    QSlider *sliderEditSize;
-    AlexLabel *labelFox;
-    QLineEdit *lineEditFamily;
+    QComboBox *comboBoxEditSize;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -70,10 +67,10 @@ public:
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        comboBoxEditSize = new QComboBox(centralWidget);
-        comboBoxEditSize->setObjectName(QStringLiteral("comboBoxEditSize"));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
 
-        gridLayout_2->addWidget(comboBoxEditSize, 2, 1, 1, 1);
+        gridLayout_2->addWidget(label_3, 1, 0, 1, 1);
 
         lineEditSize = new QLineEdit(centralWidget);
         lineEditSize->setObjectName(QStringLiteral("lineEditSize"));
@@ -85,10 +82,21 @@ public:
 
         gridLayout_2->addWidget(label_4, 2, 0, 1, 1);
 
-        fontComboBox = new QFontComboBox(centralWidget);
-        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
+        sliderEditSize = new QSlider(centralWidget);
+        sliderEditSize->setObjectName(QStringLiteral("sliderEditSize"));
+        sliderEditSize->setOrientation(Qt::Horizontal);
 
-        gridLayout_2->addWidget(fontComboBox, 6, 1, 1, 1);
+        gridLayout_2->addWidget(sliderEditSize, 4, 1, 1, 1);
+
+        labelFox = new AlexLabel(centralWidget);
+        labelFox->setObjectName(QStringLiteral("labelFox"));
+
+        gridLayout_2->addWidget(labelFox, 0, 1, 1, 1);
+
+        labelFamily = new QLabel(centralWidget);
+        labelFamily->setObjectName(QStringLiteral("labelFamily"));
+
+        gridLayout_2->addWidget(labelFamily, 3, 0, 1, 1);
 
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
@@ -104,39 +112,17 @@ public:
 
         gridLayout_2->addWidget(groupBox, 3, 1, 1, 1);
 
-        labelFamily = new QLabel(centralWidget);
-        labelFamily->setObjectName(QStringLiteral("labelFamily"));
-
-        gridLayout_2->addWidget(labelFamily, 3, 0, 1, 1);
-
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
 
         gridLayout_2->addWidget(label_2, 4, 0, 1, 1);
 
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        comboBoxEditSize = new QComboBox(centralWidget);
+        comboBoxEditSize->setObjectName(QStringLiteral("comboBoxEditSize"));
 
-        gridLayout_2->addWidget(label_3, 1, 0, 1, 1);
-
-        sliderEditSize = new QSlider(centralWidget);
-        sliderEditSize->setObjectName(QStringLiteral("sliderEditSize"));
-        sliderEditSize->setOrientation(Qt::Horizontal);
-
-        gridLayout_2->addWidget(sliderEditSize, 4, 1, 1, 1);
-
-        labelFox = new AlexLabel(centralWidget);
-        labelFox->setObjectName(QStringLiteral("labelFox"));
-
-        gridLayout_2->addWidget(labelFox, 0, 1, 1, 1);
-
-        lineEditFamily = new QLineEdit(centralWidget);
-        lineEditFamily->setObjectName(QStringLiteral("lineEditFamily"));
-
-        gridLayout_2->addWidget(lineEditFamily, 5, 1, 1, 1);
+        gridLayout_2->addWidget(comboBoxEditSize, 2, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
-        fontComboBox->raise();
         labelFox->raise();
         label_3->raise();
         lineEditSize->raise();
@@ -146,7 +132,6 @@ public:
         labelFamily->raise();
         label_2->raise();
         sliderEditSize->raise();
-        lineEditFamily->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 777, 22));
@@ -159,6 +144,7 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(comboBoxEditSize, SIGNAL(currentIndexChanged(QString)), lineEditSize, SLOT(setText(QString)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -166,15 +152,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
+        labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
+        labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
         groupBox->setTitle(QString());
         radioButtonArial->setText(QApplication::translate("MainWindow", "Arial", nullptr));
         radioButtonTNR->setText(QApplication::translate("MainWindow", "Times New Roman", nullptr));
         radioButtonSans->setText(QApplication::translate("MainWindow", "Comic Sans MS", nullptr));
-        labelFamily->setText(QApplication::translate("MainWindow", "Family", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Font Size", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "Font Size Type", nullptr));
-        labelFox->setText(QApplication::translate("MainWindow", "The quick brown fox likes CSE 335", nullptr));
     } // retranslateUi
 
 };

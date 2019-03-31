@@ -11,15 +11,18 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    connect(ui->lineEditFamily,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(setFontByText(QString)));
-    connect(ui->lineEditFamily,SIGNAL(textChanged(QString)),ui->fontComboBox,SLOT(setCurrentText(QString)));
-    connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->lineEditFamily,SLOT(showFont(QFont)));
+    //setup combo box
+    ui->comboBoxEditSize->addItem("small");
+    ui->comboBoxEditSize->addItem("medium");
+    ui->comboBoxEditSize->addItem("big");
 
-    connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->labelFox,SLOT(setFont(QFont)));
+    //old lecture code for reference
+    //connect(ui->lineEditFamily,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(setFontByText(QString)));
+    //connect(ui->lineEditFamily,SIGNAL(textChanged(QString)),ui->fontComboBox,SLOT(setCurrentText(QString)));
+    //connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->lineEditFamily,SLOT(showFont(QFont)));
+    //connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),ui->labelFox,SLOT(setFont(QFont)));
     //Below works also.
     //connect(ui->fontComboBox,SIGNAL(currentFontChanged(QFont)),this,SLOT(getFont(QFont)));
-
-
 
     //type in font size
     connect(ui->lineEditSize,SIGNAL(textChanged(QString)),ui->labelFox,SLOT(modifyFontByCheckboxSize(QString)));
@@ -31,6 +34,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //slider size
     connect(ui->sliderEditSize, SIGNAL(valueChanged(int)), ui->labelFox,SLOT(modifyFontBySliderValue(int)));
+
+    //event handling for text box text changed
+    connect(ui->lineEditSize, SIGNAL(textChanged(Qstring)), ui->sliderEditSize, SLOT(setValue(100)));
 }
 
 void MainWindow::getFont(QFont qf){

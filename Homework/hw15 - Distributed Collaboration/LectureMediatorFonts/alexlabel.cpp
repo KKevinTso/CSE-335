@@ -46,7 +46,7 @@ void AlexLabel::modifyFontByCheckboxSize(QString sizeString){
     else if(sizeString == "medium"){
         size = 20;
     }
-    else if(sizeString == "large"){
+    else if(sizeString == "big"){
         size = 40;
     }
 
@@ -66,4 +66,17 @@ void AlexLabel::modifyFontBySliderValue(int size){
         font.setPixelSize(size);
     //Use the modified font
     this->setFont(font);
+}
+
+// EVENT HANDLERS BETWEEN UI ELEMENTS
+void AlexLabel::modifySliderValue(QString sizeString){
+
+    if(sizeString == "small"){
+    }
+    else if(sizeString == "medium"){
+
+    }
+    else if(sizeString == "big"){
+
+    }
 }

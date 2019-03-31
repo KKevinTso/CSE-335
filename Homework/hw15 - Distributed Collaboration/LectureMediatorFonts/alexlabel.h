@@ -33,6 +33,9 @@ public slots:
     void modifyFontByRadioButtonSans(bool);
 
     void modifyFontBySliderValue(int);
+
+    //event handlers for ui elements
+    void modifySliderValue(QString);
 };
 
 #endif // ALEXLABEL_H
