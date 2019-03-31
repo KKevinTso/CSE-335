@@ -1,0 +1,5 @@
+used the lecture code from lecture
+
+it should compile but was getting some wicked build errors that reverting wouldnt fix
+
+- tony
